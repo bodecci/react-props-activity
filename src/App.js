@@ -11,8 +11,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-        <h1>React Props Activity</h1>
+        <Header />
         </header>
+        <p>Enter a number and click up or down. The total will increase or decrease 
+            by that amount.
+        </p>
       </div>
     );
   }

@@ -4,29 +4,32 @@ class EnterNumber extends Component {
     constructor(props){
         super(props);
         this.state = {
-            upNumber: 0,
-            downNumber: 0,
+            inNumber: 0,
         }
     }
 
     getNumber = (event) => {
         this.setState({
-            inputNumber: event.target.value,
+            inNumber: event.target.value,
         });
     }
 
     addUp = (event) => {
         const up = {
-            upNumber: (this.state.upNumber + 1),
+            upNumber: this.state.inNumber,
         };
+        console.log('up was clicked', this.state.inNumber);
+        
+        console.log(up);
+        
         this.props.addToCurrentTotal(up);
     }
 
     addDown = (event) => {
         const down = {
-            downNumber: (this.state.downNumber -1),
+            downNumber: this.state.inNumber,
         };
-        this.state.addToCurrentTotal(down);
+        this.props.addToCurrentTotal(down);
     }
 
     render() {

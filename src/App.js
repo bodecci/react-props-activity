@@ -16,6 +16,7 @@ class App extends Component {
         <p>Enter a number and click up or down. The total will increase or decrease 
             by that amount.
         </p>
+        <EnterNumber />
       </div>
     );
   }
